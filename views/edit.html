@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog | Admin Panel</title>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <form method='post' action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
+        <label>
+            title<input type='text' name='title' value="<?=$article['title']?>">
+        </label>
+        <label>
+            date<input type='date' name='date' value="<?=$article['date']?>">
+        </label>
+        <label>
+            <textarea name='content'><?=$article['content']?></textarea>
+        </label>
+        <input type='submit' value='save'>
+    </form>
+</body>
+</html>
