@@ -2,14 +2,8 @@
 <html>
 <head>
     <title>Blog | <?=$article['title']?></title>
-    <meta charset='utf-8'>
-</head>
-<body>
-    <h1><a href='index.php'>Blog</a></h1>
-    <div>
+<?php include('views/common/header.html'); ?>
         <h3><?=$article['title']?></h3>
         <p><?=$article['date']?></p>
         <p><?=$article['content']?></p>
-    </div>
-</body>
-</html>
+<?php include('views/common/footer.html'); ?>

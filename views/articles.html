@@ -2,16 +2,10 @@
 <html>
 <head>
     <title>Blog</title>
-    <meta charset='utf-8'>
-</head>
-<body>
-    <h1><a href='index.php'>Blog</a></h1>
-    <div>
+<?php include('views/common/header.html'); ?>
     <?php foreach($articles as $article): ?>
         <h3><a href="article.php?id=<?=$article['id']?>"><?=$article['title']?></a></h3>
         <p><?=$article['date']?></p>
         <p><?=articles_intro($article['content'])?></p>
     <?php endforeach ?>
-    </div>
-</body>
-</html>
+<?php include('views/common/footer.html'); ?>
