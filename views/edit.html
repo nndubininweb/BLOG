@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blog | Admin Panel</title>
+    <title>Blog | Edit article</title>
     <meta charset='utf-8'>
 </head>
 <body>
+    <h2>Edit article</h2>
     <form method='post' action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
-        <label>
-            title<input type='text' name='title' value="<?=$article['title']?>">
-        </label>
-        <label>
-            date<input type='date' name='date' value="<?=$article['date']?>">
-        </label>
-        <label>
-            <textarea name='content'><?=$article['content']?></textarea>
-        </label>
-        <input type='submit' value='save'>
+        <p>
+            <label>Title:<br></label>
+            <input type='text' name='title' value="<?=$article['title']?>">
+        </p>
+        <p>
+            <label>Date:<br></label>
+            <input type='date' name='date' value="<?=$article['date']?>">
+        </p>
+        <p>
+            <textarea name='content' ><?=$article['content']?></textarea>
+        </p>
+        <p><input type='submit' value='Save'></p>
     </form>
 </body>
 </html>
