@@ -2,10 +2,25 @@
 <html>
 <head>
     <title>Blog</title>
-<?php include('views/common/header.html'); ?>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <h1><a href='index.php'>Blog</a></h1>
+    <p>
+        <a href="index.php">To main</a>
+    <?php if(empty($_SESSION['login']) or empty($_SESSION['id'])){ ?>
+        <a href="singin.php">Sing in</a>
+        <a href="singup.php">Sing up</a>
+    <?php } else { ?>
+        <a href="exit.php">Log out</a>
+    <?php } ?>
+    </p>
+    <div>
     <?php foreach($articles as $article): ?>
         <h3><a href="article.php?id=<?=$article['id']?>"><?=$article['title']?></a></h3>
         <p><?=$article['date']?></p>
         <p><?=articles_intro($article['content'])?></p>
     <?php endforeach ?>
-<?php include('views/common/footer.html'); ?>
+    </div>
+</body>
+</html>

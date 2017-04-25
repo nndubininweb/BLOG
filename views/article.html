@@ -2,8 +2,20 @@
 <html>
 <head>
     <title>Blog | <?=$article['title']?></title>
-<?php include('views/common/header.html'); ?>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <h1><a href='index.php'>Blog</a></h1>
+    <p>
+        <a href="index.php">To main</a>
+        <a href="singin.php">Sing in</a>
+        <a href="singup.php">Sing up</a>
+        <a href="exit.php">Log out</a>
+    </p>
+    <div>
         <h3><?=$article['title']?></h3>
         <p><?=$article['date']?></p>
         <p><?=$article['content']?></p>
-<?php include('views/common/footer.html'); ?>
+    </div>
+</body>
+</html>
