@@ -1,1 +1,2 @@
-# JSONTEAM-BLOG
+# BLOG
+simple blogs
